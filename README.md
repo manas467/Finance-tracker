@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# 💸 FinanceFlow – Personal Finance Tracker with AI
+
+FinanceFlow is a full-stack MERN app built with **Next.js 14**, **Express**, **MongoDB**, and **Recharts** to help users manage income/expenses and get smart AI-powered financial insights.
+
+---
+
+## ✨ Features
+
+- 🧾 Add, view, filter & delete transactions
+- 📊 Visual analytics using charts
+- 🔐 JWT authentication (login/register)
+- ☁️ MongoDB Atlas for data storage
+- 🌙 Dark mode support
+- 🤖 AI Smart Insights via Groq API
+- 🧠 Personalized tips based on spending
+
+---
+
+## 🚀 Tech Stack
+
+**Frontend**: Next.js 14, Tailwind CSS, React Hook Form, Recharts  
+**Backend**: Express.js, MongoDB, JWT, Axios  
+**AI**: Groq API (Mixtral or LLaMA3 models)
+
+---
+
+## 🧠 AI Sample Output
+
+> "You spent a large portion of your expenses on Food & Shopping in June. Try reducing discretionary spending by 20% next month."
+
+---
+
+## 🛠️ Running Locally
 
 ```bash
+# Server
+cd server
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Client
+cd client
+npm install
+npm run dev
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
