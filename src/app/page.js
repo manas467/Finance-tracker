@@ -1,103 +1,113 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main className="text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900">
+      {/* — Hero — */}
+      <section className="relative h-screen flex items-center justify-center text-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1557426274-62a5bea4353e?auto=format&fit=crop&w=1470&q=80')",
+          }}
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
+        <div className="relative z-10 max-w-xl px-4">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            Empower Your Finances, Simplify Your Life
+          </h1>
+          <p className="text-lg sm:text-xl mb-8">
+            FinanceFlow helps you track expenses, visualize spending, and plan for the future.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Link
+              href="/register"
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition"
+            >
+              Get Started
+            </Link>
+            <Link
+              href="/dashboard"
+              className="px-6 py-2 bg-transparent border border-white hover:bg-white hover:text-gray-900 rounded transition"
+            >
+              View Demo
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* — Features — */}
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 px-4">
+          {[
+            {
+              title: "🧾 Expense Tracking",
+              desc: "Log your expenses quickly and categorize them for better insights.",
+            },
+            {
+              title: "📊 Insights & Charts",
+              desc: "Visualize your spending trends and cash flow with powerful charts.",
+            },
+            {
+              title: "🔐 Secure Auth",
+              desc: "Secure login, protected data, and reliable backend built with next-gen tech.",
+            },
+          ].map((f, i) => (
+            <div
+              key={i}
+              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition"
+            >
+              <h3 className="text-xl font-semibold mb-2">{f.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
+
+      {/* — Testimonials — */}
+      <section className="py-16 bg-gray-100 dark:bg-gray-800">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-3xl font-bold mb-8">What Our Users Say</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Sarah",
+                text: "FinanceFlow helped me save more than ₹50K this year — the charts give great clarity!",
+              },
+              {
+                name: "Raj",
+                text: "I love the monthly filters and clean dashboard — makes budget planning easy.",
+              },
+            ].map((t, i) => (
+              <blockquote
+                key={i}
+                className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow"
+              >
+                <p className="italic mb-4">"{t.text}"</p>
+                <footer className="font-semibold">— {t.name}</footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* — Footer — */}
+      <footer className="py-8 text-center text-sm text-gray-600 dark:text-gray-400">
+        <p>© {new Date().getFullYear()} FinanceFlow. All rights reserved.</p>
+        <p>
+          Built with ❤️ •{" "}
+          <a href="#" className="underline hover:text-blue-600">
+            Terms
+          </a>{" "}
+          •{" "}
+          <a href="#" className="underline hover:text-blue-600">
+            Privacy
+          </a>
+        </p>
       </footer>
-    </div>
+    </main>
   );
 }
