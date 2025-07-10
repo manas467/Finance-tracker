@@ -86,7 +86,11 @@ export default function Home() {
                 key={i}
                 className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow"
               >
-                <p className="italic mb-4">"{t.text}"</p>
+                <p className="italic mb-4">
+  {'"'}
+  {t.text}
+  {'"'}
+</p>
                 <footer className="font-semibold">— {t.name}</footer>
               </blockquote>
             ))}
