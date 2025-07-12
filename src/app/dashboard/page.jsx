@@ -35,7 +35,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userRes = await axios.get("/auth/me");
+        const userRes = await axios.get("/api/auth/me");
         setUser(userRes.data);
 
         const txRes = await axios.get("/transactions");

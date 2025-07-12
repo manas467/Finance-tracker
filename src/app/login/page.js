@@ -16,7 +16,7 @@ export default function Login() {
     setError("");
 
     try {
-      await axios.post("/auth/login", form);
+      await axios.post("/api/auth/login", form);
       router.push("/dashboard"); 
     } catch (err) {
       setError(err.response?.data || "Login failed");
