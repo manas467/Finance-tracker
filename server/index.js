@@ -11,9 +11,19 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const allowedOrigins = [
+  "https://finance-tracker-166mdtcx3-manas-projects-2d084ffe.vercel.app",
+  "https://finance-tracker-1l1vk589q-manas-projects-2d084ffe.vercel.app"
+];
 
 app.use(cors({
-  origin: "https://finance-tracker-166mdtcx3-manas-projects-2d084ffe.vercel.app",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
