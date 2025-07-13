@@ -14,7 +14,8 @@ const PORT = process.env.PORT || 5000;
 const allowedOrigins = [
   "https://finance-tracker-166mdtcx3-manas-projects-2d084ffe.vercel.app",
   "https://finance-tracker-1l1vk589q-manas-projects-2d084ffe.vercel.app",
-  "https://finance-tracker-limryfkah-manas-projects-2d084ffe.vercel.app"
+  "https://finance-tracker-limryfkah-manas-projects-2d084ffe.vercel.app",
+  "https://finance-tracker-git-main-manas-projects-2d084ffe.vercel.app"
 
 ];
 
