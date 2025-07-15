@@ -16,7 +16,8 @@ const allowedOrigins = [
   "https://finance-tracker-1l1vk589q-manas-projects-2d084ffe.vercel.app",
   "https://finance-tracker-limryfkah-manas-projects-2d084ffe.vercel.app",
   "https://finance-tracker-git-main-manas-projects-2d084ffe.vercel.app",
-   "https://finance-tracker-f8wku1614-manas-projects-2d084ffe.vercel.app"
+   "https://finance-tracker-f8wku1614-manas-projects-2d084ffe.vercel.app",
+   "https://finance-tracker-qspaqgcog-manas-projects-2d084ffe.vercel.app"
 
 ];
 
