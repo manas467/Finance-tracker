@@ -16,7 +16,9 @@ export default function Register() {
     setError("");
 
     try {
-      await axios.post("/api/auth/register", form);
+      await axios.post("/api/auth/register", form,{
+        withCredentials:true
+      });
       router.push("/login");
     } catch (err) {
       setError(err.response?.data || "Registration failed");
