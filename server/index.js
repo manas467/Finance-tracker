@@ -22,10 +22,8 @@ const PORT = process.env.PORT || 5000;
 //];
 
 app.use(cors({
-  origin: 'https://finance-tracker-28yf0qzoy-manas-projects-2d084ffe.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true // If your app uses cookies or auth tokens
+  origin: "http://13.233.76.146:3000",
+  credentials: true,
 }));
 
 

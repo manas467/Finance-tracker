@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://finance-tracker-rs09.onrender.com",
+  baseURL: "http://13.233.76.146:5000",
   withCredentials: true 
 });
 
