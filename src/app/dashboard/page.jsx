@@ -40,7 +40,7 @@ export default function Dashboard() {
         });
         setUser(userRes.data);
 
-        const txRes = await axios.get("/transactions");
+        const txRes = await axios.get("/api/transactions");
         setTransactions(txRes.data);
       } catch (err) {
         router.push("/login");
@@ -59,7 +59,7 @@ export default function Dashboard() {
   
     const fetchInsights = async () => {
       try {
-        const res = await axios.post("/ai/smart-insights", {
+        const res = await axios.post("/api/ai/smart-insights", {
           transactions,
         });
         setInsight(res.data.summary);
@@ -74,7 +74,7 @@ export default function Dashboard() {
   
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("/transactions", data);
+      const res = await axios.post("/api/transactions", data);
       setTransactions([res.data, ...transactions]);
       reset();
     } catch {
@@ -84,7 +84,7 @@ export default function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/transactions/${id}`);
+      await axios.delete(`/api/transactions/${id}`);
       setTransactions(transactions.filter((tx) => tx._id !== id));
     } catch {
       alert("Failed to delete transaction");

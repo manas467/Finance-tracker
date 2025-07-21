@@ -21,7 +21,7 @@ export default function Navbar() {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const res = await axios.get("/auth/me");
+                const res = await axios.get("/api/auth/me");
                 setUser(res.data);
             } catch {
                 setUser(null); // not logged in
@@ -31,7 +31,7 @@ export default function Navbar() {
     }, [pathname]); // refetch on route change
 
     const handleLogout = async () => {
-        await axios.post("/auth/logout");
+        await axios.post("/api/auth/logout");
         router.push("/login");
     };
 
